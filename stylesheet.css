@@ -7,7 +7,7 @@
 }
 body{
     color: #ededed;
-    background: #080808;
+    background: #081b29;
 }
 .header
 {
@@ -16,7 +16,7 @@ body{
     left: 0;
     width: 100%;
     padding: 20px 10%;
-    background: #051129;
+    background: #020710;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -52,7 +52,6 @@ body{
     width: 100%;
     justify-content: space-between;
     height: 100vh;
-    background: url(pexels-federico-orihuela-4719340.jpg) no-repeat;
     background-size: cover;
     background-position: center;
     align-items: center;
@@ -111,7 +110,7 @@ body{
 }
 .home-sci a:hover {
     background: #0ef;
-    color: #080808;
+    color: #081b29;
     box-shadow: 0 0 20px #0ef;
 }
 .btn-box {
@@ -120,7 +119,7 @@ body{
     background: #0ef;
     border-radius: 40px;
     font-size: 16px;
-    color: #080808;
+    color: #081b29;
     letter-spacing: 1px;
     text-decoration: none;
     font-weight: 600;
@@ -242,19 +241,23 @@ body{
     0 0 100px cyan, 0 0 200px cyan;
 }
 .services-list div:hover{
-    transform: translate(-10px);
+    transform: translateY(-10px);
 }
 
 section{
     display: flex;
     flex-wrap: wrap;
 }
-.container1{
-    width: 600px;
-    height: 500px;
+.container1 {
+    width: calc(50% - 90px); /* Adjusted width for two containers with 80px spacing between them */
+    height: 700px;
     padding: 75px 90px;
-    margin-left: 120px;
+    margin-left: 40px; /* Adjusted margin to leave space on the left side */
+    margin-right: 30px;
+    float: left; /* Float the containers to align them side by side */
+    box-sizing: border-box; /* Include padding and border in the width calculation */
 }
+
 .heading1{
     text-align: center;
     text-decoration: underline;
@@ -266,14 +269,13 @@ section{
     font-size: 23px;
 }
 .Technical-bars .bar {
-    margin-top: 40px;
+    margin-top: 40px 0;
 }
 .Technical-bars .bar:first-child{
     margin-top: 0;
 }
 .Technical-bars .bar:last-child{
     margin-bottom: 0;
-
 }
 .Technical-bars .bar .info{
     margin-bottom: 5px;
@@ -289,8 +291,8 @@ section{
     border-radius: 10px;
     width: 100%;
     height: 5px;
-    background-color: rebeccapurple;
-    animation: animate 1s cubic-bezier(1,0,0,5,1) forwards;
+    background-color: #000;
+    animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
     transform: scaleX(0);
     transform-origin: left;
 }
@@ -304,7 +306,7 @@ section{
     background-color: #0ef;
     position: absolute;
     border-radius: 10px;
-    animation: animate 1s 1s cubic-bezier(1,0,0,5,1) forwards;
+    animation: animate 1s 1s cubic-bezier(1,0,0.5,1) forwards;
     transform: scaleX(0);
     transform-origin: left;
 }
@@ -314,7 +316,7 @@ section{
 .progress-line.css span{
     width: 60%;
 }
-.progress-line.Javascript span{
+.progress-line.javascript span{
     width: 85%;
 }
 .progress-line.C-plus-plus span{
@@ -338,17 +340,126 @@ section{
 .progress-line.html span::after{
     content: 90%;
 }
-.progress-line.CSS span::after{
-    content: 90%;
+.progress-line.css span::after{
+    content: 60%;
 }
-.progress-line.html span::after{
-    content: 90%;
+.progress-line.C-plus-plus span::after{
+    content: 50%;
 }
-.progress-line.html span::after{
-    content: 90%;
+.progress-line.react span::after{
+    content: 75%;
+}
+.progress-line span::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 7px solid transparent;
+    border-bottom-width: 0px;
+    border-right-width: 0px;
+    border-top-color: #000;
+    top: -10px;
+    right: 0;
+    animation: showText 0.5s 1.5s linear forwards;
+    opacity: 0;
+}
+@keyframes showText{
+    100%{
+        opacity: 1;
+    }
+}
+.radial-bars{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+.radial-bars .radial-bar{
+    width: 50%;
+    height: 170px;
+    margin-bottom: 10px;
+    position: relative;
 }
 
+.radial-bars .radial-bar svg{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-90deg);
+    width: 120px;
+    height: 160px;
+}
+.radial-bars .radial-bar .progress-bar{
+    stroke-width: 10;
+    stop-color: black;
+    fill: transparent;
+    stroke-dasharray: 502;
+    stroke-dashoffset: 502;
+    stroke-linecap: round;
+    animation: animate-bar 1s linear forwards;
+}
+@keyframes animate-bar {
+    100%{
+        stroke-dashoffset: -1;
+    }
+    
+}
+.path {
+    stroke-width: 10;
+    stroke: #0ef;
+    fill: transparent;
+    stroke-dashoffset: 502;
+    stroke-dasharray: 502;
+    stroke-linecap: round;
+}
+.path-1{animation: animate-path1 1s 1s linear forwards;}
+.path-2{animation: animate-path2 1s 1s linear forwards;}
+.path-3{animation: animate-path3 1s 1s linear forwards;}
+.path-4{animation: animate-path4 1s 1s linear forwards;}
 
+@keyframes animate-path1 {
+    100%{
+        stroke-dashoffset: 50;;
+    }
+}
+@keyframes animate-path2 {
+    100%{
+        stroke-dashoffset: 175;;
+    }
+}
+@keyframes animate-path3 {
+    100%{
+        stroke-dashoffset: 125;;
+    }
+}
+@keyframes animate-path4 {
+    100%{
+        stroke-dashoffset: 75;;
+    }
+}
+.radial-bars .percentage{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 17px;
+    font-weight: 500;
+    animation: showText 0.5s 1s linear forwards;
+    opacity: 0;
+}
+.radial-bars .text{
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    bottom: -5px;
+    transform: translateX(-50px);
+    font-size: 17px;
+    font-weight: 500;
+    animation: showText 0.5s 1s linear forwards;
+    opacity: 0 ;
+}
 
 @keyframes slideRight {
     0% {
